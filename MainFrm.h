@@ -1,5 +1,4 @@
-﻿
-// MainFrm.h: CMainFrame 类的接口
+﻿// MainFrm.h: CMainFrame 类的接口
 //
 
 #pragma once
@@ -35,6 +34,8 @@ protected:  // 控件条嵌入成员
 // 生成的消息映射函数
 protected:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnManageIncome();
+	afx_msg void OnManageExpense();
 	DECLARE_MESSAGE_MAP()
 
 };

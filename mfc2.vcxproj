@@ -186,11 +186,15 @@
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="ChildView.h" />
     <ClInclude Include="CSqliteManager.h" />
+    <ClInclude Include="ExpenseDlg.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="IncomeDlg.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="mfc2.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="res\resource_additions.h" />
     <ClInclude Include="sqlite3.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -198,6 +202,8 @@
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="ChildView.cpp" />
     <ClCompile Include="CSqliteManager.cpp" />
+    <ClCompile Include="ExpenseDlg.cpp" />
+    <ClCompile Include="IncomeDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="mfc2.cpp" />
     <ClCompile Include="pch.cpp">
@@ -213,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="mfc2.rc" />
+    <ResourceCompile Include="res\mfc2_dialogs.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\mfc2.rc2" />

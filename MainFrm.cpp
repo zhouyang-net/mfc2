@@ -1,5 +1,4 @@
-﻿
-// MainFrm.cpp: CMainFrame 类的实现
+﻿// MainFrm.cpp: CMainFrame 类的实现
 //
 
 #include "pch.h"
@@ -7,6 +6,8 @@
 #include "mfc2.h"
 
 #include "MainFrm.h"
+#include "IncomeDlg.h"
+#include "ExpenseDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -18,6 +19,8 @@ IMPLEMENT_DYNAMIC(CMainFrame, CMDIFrameWnd)
 
 BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_WM_CREATE()
+	ON_COMMAND(IDM_MANAGE_INCOME, &CMainFrame::OnManageIncome)
+	ON_COMMAND(IDM_MANAGE_EXPENSE, &CMainFrame::OnManageExpense)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -93,4 +96,16 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 
 // CMainFrame 消息处理程序
+
+void CMainFrame::OnManageIncome()
+{
+	CIncomeDlg dlg(this);
+	dlg.DoModal();
+}
+
+void CMainFrame::OnManageExpense()
+{
+	CExpenseDlg dlg(this);
+	dlg.DoModal();
+}
 
