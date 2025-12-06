@@ -5,6 +5,7 @@
 
 class CIncomeEditDlg : public CDialogEx
 {
+    DECLARE_DYNAMIC(CIncomeEditDlg)
 public:
     CIncomeEditDlg(CWnd* pParent = nullptr); 
     virtual ~CIncomeEditDlg() = default;
@@ -25,6 +26,7 @@ protected:
 
 class CIncomeDlg : public CDialogEx
 {
+    DECLARE_DYNAMIC(CIncomeDlg)
 public:
     CIncomeDlg(CWnd* pParent = nullptr);
     virtual ~CIncomeDlg() = default;

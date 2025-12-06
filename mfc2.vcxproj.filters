@@ -45,6 +45,15 @@
     <ClInclude Include="sqlite3.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ExpenseDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IncomeDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="res\resource_additions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mfc2.cpp">
@@ -68,9 +77,18 @@
     <ClCompile Include="sqlite3.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ExpenseDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IncomeDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="mfc2.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="res\mfc2_dialogs.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>

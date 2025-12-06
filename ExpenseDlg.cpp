@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "ExpenseDlg.h"
 #include "resource.h"
+//#include <afx.h>
 
 IMPLEMENT_DYNAMIC(CExpenseEditDlg, CDialogEx)
 IMPLEMENT_DYNAMIC(CExpenseDlg, CDialogEx)
@@ -224,21 +225,24 @@ void CExpenseDlg::OnPrint()
     ::ShellExecute(nullptr, L"open", tmpPath, nullptr, nullptr, SW_SHOWNORMAL);
 }
 
-// 修复 C2509 错误：为 CExpenseEditDlg 类添加 _GetBaseClass 声明
-class CExpenseEditDlg : public CDialogEx
-{
-    DECLARE_DYNAMIC(CExpenseEditDlg)
-public:
-    // ... 其他成员声明 ...
-
-protected:
-    // 添加此声明以匹配 MFC 宏要求
-    static CRuntimeClass* PASCAL _GetBaseClass();
-};
+//// 修复 C2509 错误：为 CExpenseEditDlg 类添加 _GetBaseClass 声明
+//class CExpenseEditDlg : public CDialogEx
+//{
+//    DECLARE_DYNAMIC(CExpenseEditDlg)
+//public:
+//    // ... 其他成员声明 ...
+//    CString m_amount; // 修复 E0020: 未定义标识符 "m_amount"
+//    CString m_category;
+//    CString m_note;
+//
+//protected:
+//    // 添加此声明以匹配 MFC 宏要求
+//    static CRuntimeClass* PASCAL _GetBaseClass();
+//};
 
 // 修复 VCR001: 未找到"_GetBaseClass"的函数定义。
 // 为 CExpenseEditDlg 类补充 _GetBaseClass 的定义
-CRuntimeClass* PASCAL CExpenseEditDlg::_GetBaseClass()
-{
-    return RUNTIME_CLASS(CDialogEx);
-}
+//CRuntimeClass* PASCAL CExpenseEditDlg::_GetBaseClass()
+//{
+//    return RUNTIME_CLASS(CDialogEx);
+//}

@@ -3,8 +3,13 @@
 #include "pch.h"
 #include "CSqliteManager.h"
 
+//#include <afxwin.h>
+//#include <afxcmn.h>
+//#include <afxdialogex.h>
+
 class CExpenseEditDlg : public CDialogEx
 {
+    DECLARE_DYNAMIC(CExpenseEditDlg)
 public:
     CExpenseEditDlg(CWnd* pParent = nullptr);
     virtual ~CExpenseEditDlg() = default;
@@ -25,6 +30,7 @@ protected:
 
 class CExpenseDlg : public CDialogEx
 {
+    DECLARE_DYNAMIC(CExpenseDlg)
 public:
     CExpenseDlg(CWnd* pParent = nullptr);
     virtual ~CExpenseDlg() = default;
